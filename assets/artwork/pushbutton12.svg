@@ -1,0 +1,37 @@
+<svg class="cgfx__switch-pushbutton-12x12" xmlns="http://www.w3.org/2000/svg" viewBox="-26 -28 52 56" width="52" height="56" style="fill: rgb(0, 0, 0); stroke: none; font-family: Arial, Helvetica, sans-serif;">
+ <defs>
+  <linearGradient id="__PREFIX__leg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d939b"/><stop offset=".45" stop-color="#f2f4f6"/><stop offset="1" stop-color="#7d838b"/></linearGradient>
+  <linearGradient id="__PREFIX__plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset=".5" stop-color="#c9ced4"/><stop offset="1" stop-color="#9aa1a9"/></linearGradient>
+  <radialGradient id="__PREFIX__stem" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#55585d"/><stop offset=".7" stop-color="#2a2c30"/><stop offset="1" stop-color="#16171a"/></radialGradient>
+  <radialGradient id="__PREFIX__stemdown" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#2c2e32"/><stop offset="1" stop-color="#101113"/></radialGradient>
+ </defs>
+ <g class="cgfx__wireview">
+  <!-- Legs: 12.5 mm apart across the body (always joined) and 5 mm apart along it; they go into rows d and g -->
+  <g fill="url(#__PREFIX__leg)">
+   <rect x="-11.4" y="-27" width="2.8" height="6" rx=".6"/><rect x="8.6" y="-27" width="2.8" height="6" rx=".6"/>
+   <rect x="-11.4" y="21" width="2.8" height="6" rx=".6"/><rect x="8.6" y="21" width="2.8" height="6" rx=".6"/>
+  </g>
+  <!-- Black 12 x 12 mm body -->
+  <rect x="-23.6" y="-23.6" width="47.2" height="47.2" rx="1.6" fill="#1c1d20" stroke="#0b0b0c" stroke-width=".6"/>
+  <rect x="-23.6" y="-23.6" width="47.2" height="47.2" rx="1.6" fill="none" stroke="#3a3c41" stroke-width=".8" opacity=".8"/>
+  <!-- Metal cover plate with its side tabs and the four corner posts -->
+  <rect x="-24.2" y="-6" width="3.6" height="12" rx=".5" fill="url(#__PREFIX__plate)" stroke="#7b828a" stroke-width=".4"/>
+  <rect x="20.6" y="-6" width="3.6" height="12" rx=".5" fill="url(#__PREFIX__plate)" stroke="#7b828a" stroke-width=".4"/>
+  <rect x="-21" y="-21" width="42" height="42" rx="1.4" fill="url(#__PREFIX__plate)" stroke="#7b828a" stroke-width=".5"/>
+  <g fill="#1c1d20" stroke="#6f767e" stroke-width=".5"><circle cx="-16" cy="-16" r="2.6"/><circle cx="16" cy="-16" r="2.6"/><circle cx="-16" cy="16" r="2.6"/><circle cx="16" cy="16" r="2.6"/></g>
+  <circle r="15.6" fill="#8e959d"/><circle r="14.6" fill="#1c1d20"/>
+  <!-- Round actuator: up (with its shadow) and pressed (sunk, darker) -->
+  <g class="cgfx__up" display="inline">
+   <circle cx="0" cy="1.6" r="13.4" fill="#000" opacity=".35"/>
+   <circle r="13.4" fill="url(#__PREFIX__stem)"/>
+   <circle r="10.4" fill="none" stroke="#5c6066" stroke-width=".7" opacity=".7"/>
+   <path d="M-9,-6.5a11,11 0 0 1 12,-5" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity=".25"/>
+  </g>
+  <g class="cgfx__pressed" display="none">
+   <circle r="12.6" fill="url(#__PREFIX__stemdown)"/>
+   <circle r="9.8" fill="none" stroke="#45484d" stroke-width=".7" opacity=".7"/>
+  </g>
+  <path class="cgfx__hitarea" style="fill: rgb(255, 0, 0); display: inline; opacity: 0; pointer-events: all;" d="M-24.2,-27h48.4v54h-48.4z"/>
+  <rect class="cgfx__selected" display="none" fill="none" stroke="#009cda" stroke-width="2" stroke-linejoin="round" x="-25.6" y="-25.6" width="51.2" height="51.2" rx="2" style="display: none; pointer-events: none;"/>
+ </g>
+</svg>

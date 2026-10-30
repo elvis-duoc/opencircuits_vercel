@@ -1,0 +1,59 @@
+<svg class="cgfx__sensor-soil-module" xmlns="http://www.w3.org/2000/svg" viewBox="-28 0 56 130" width="56" height="130" style="fill: rgb(0, 0, 0); stroke: none; font-family: Arial, Helvetica, sans-serif;">
+ <defs>
+  <linearGradient id="__PREFIX__pin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d939b"/><stop offset=".45" stop-color="#f2f4f6"/><stop offset="1" stop-color="#7d838b"/></linearGradient>
+  <linearGradient id="__PREFIX__pcb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2463b8"/><stop offset="1" stop-color="#173f80"/></linearGradient>
+  <linearGradient id="__PREFIX__pot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8fe0"/><stop offset="1" stop-color="#1f62b8"/></linearGradient>
+ </defs>
+ <g class="cgfx__wireview">
+  <!-- Probe header: + and − to the YL-69 fork, pointing up -->
+  <g>
+   <rect x="-6.2" y="0" width="2.4" height="16" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="3.8" y="0" width="2.4" height="16" rx=".6" fill="url(#__PREFIX__pin)"/>
+  </g>
+  <rect x="-10" y="12" width="20" height="8" rx="1" fill="#1a1a1a"/>
+  <rect x="-10" y="12" width="20" height="1.6" rx=".8" fill="#3a3a3a"/>
+  <!-- Output header: AO, DO, GND and VCC at 2.54 mm, pointing down -->
+  <g>
+   <rect x="-16.2" y="108" width="2.4" height="22" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="-6.2" y="108" width="2.4" height="22" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="3.8" y="108" width="2.4" height="22" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="13.8" y="108" width="2.4" height="22" rx=".6" fill="url(#__PREFIX__pin)"/>
+  </g>
+  <!-- Blue module board -->
+  <rect x="-27" y="19" width="54" height="88" rx="1.6" fill="url(#__PREFIX__pcb)" stroke="#123266" stroke-width=".6"/>
+  <circle cx="-20" cy="27" r="4.4" fill="#d6dce2"/><circle cx="-20" cy="27" r="3.2" fill="#f4f5f6"/>
+  <g fill="#f4f4f4" font-weight="700" font-size="4.2" text-anchor="middle"><text x="-5" y="27">+</text><text x="5" y="27">−</text></g>
+  <!-- LM393 comparator (SOIC-8) -->
+  <g fill="#c4c9cf"><rect x="-22.5" y="36" width="1.4" height="3"/><rect x="-18.5" y="36" width="1.4" height="3"/><rect x="-14.5" y="36" width="1.4" height="3"/><rect x="-10.5" y="36" width="1.4" height="3"/><rect x="-22.5" y="55" width="1.4" height="3"/><rect x="-18.5" y="55" width="1.4" height="3"/><rect x="-14.5" y="55" width="1.4" height="3"/><rect x="-10.5" y="55" width="1.4" height="3"/></g>
+  <rect x="-24" y="39" width="16" height="16" rx=".8" fill="#1d1f22"/>
+  <circle cx="-21.5" cy="41.5" r=".9" fill="#3c4046"/>
+  <text x="-16" y="48" fill="#8d939b" font-size="2.6" text-anchor="middle">LM393</text>
+  <!-- Blue trimmer: sets the moisture at which DO switches -->
+  <rect x="-2" y="31" width="25" height="24" rx="1.2" fill="url(#__PREFIX__pot)" stroke="#164a8e" stroke-width=".6"/>
+  <g class="cgfx__potknob" transform="translate(10.5 43)">
+   <circle r="7.2" fill="#f2f4f6" stroke="#b9c2ca" stroke-width=".6"/>
+   <path d="M-5,0H5M0,-5V5" stroke="#5b6670" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+  <!-- 10 kΩ resistors and the filter capacitor -->
+  <g>
+   <rect x="-24" y="62" width="9" height="6" rx=".5" fill="#c9d3dd"/><rect x="-22.5" y="63" width="6" height="4" fill="#1a1a1a"/>
+   <rect x="-12" y="62" width="9" height="6" rx=".5" fill="#c9d3dd"/><rect x="-10.5" y="63" width="6" height="4" fill="#1a1a1a"/>
+   <rect x="0" y="62" width="9" height="6" rx=".5" fill="#c9d3dd"/><rect x="1.5" y="63" width="6" height="4" fill="#1a1a1a"/>
+   <rect x="12" y="62" width="9" height="6" rx="1" fill="#c9d3dd"/><rect x="13.5" y="63" width="6" height="4" rx=".6" fill="#b88a5a"/>
+   <g fill="#e8e8e8" font-size="2.1" text-anchor="middle"><text x="-19.5" y="65.8">103</text><text x="-7.5" y="65.8">103</text><text x="4.5" y="65.8">102</text></g>
+  </g>
+  <!-- Indicator LEDs: power (left) and DO, lit while the soil is wet (right) -->
+  <rect x="-22" y="74" width="7" height="9" rx=".6" fill="#e9edf1"/><rect x="-20.6" y="76" width="4.2" height="5" rx=".5" fill="#5a2a2a" class="cgfx__powerled"/>
+  <rect x="15" y="74" width="7" height="9" rx=".6" fill="#e9edf1"/><rect x="16.4" y="76" width="4.2" height="5" rx=".5" fill="#2f5a3a" class="cgfx__ledsignal"/>
+  <g fill="#f4f4f4" font-weight="700">
+   <text x="-18.5" y="89" font-size="3" text-anchor="middle">PWR</text><text x="18.5" y="89" font-size="3" text-anchor="middle">DO</text>
+   <text x="0" y="81" font-size="3.4" text-anchor="middle">FC-28</text>
+   <text x="-15" y="101" font-size="3.6" text-anchor="middle">AO</text><text x="-5" y="101" font-size="3.6" text-anchor="middle">DO</text>
+   <text x="5" y="101" font-size="3.6" text-anchor="middle">GND</text><text x="15" y="101" font-size="3.6" text-anchor="middle">VCC</text>
+  </g>
+  <rect x="-20" y="104" width="40" height="8" rx="1" fill="#1a1a1a"/>
+  <rect x="-20" y="104" width="40" height="1.6" rx=".8" fill="#3a3a3a"/>
+  <path class="cgfx__hitarea" style="fill: rgb(255, 0, 0); display: inline; opacity: 0; pointer-events: all;" d="M-27,12h54v100h-54z"/>
+  <path class="cgfx__selected" display="none" fill="none" stroke="#009cda" stroke-width="2" stroke-linejoin="round" d="M-29,10h58v104h-58z" style="display: none; pointer-events: none;"/>
+ </g>
+</svg>

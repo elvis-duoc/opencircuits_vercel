@@ -1,0 +1,38 @@
+<svg class="cgfx__sensor-soil-probe" xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 40 150" width="40" height="150" style="fill: rgb(0, 0, 0); stroke: none; font-family: Arial, Helvetica, sans-serif;">
+ <defs>
+  <linearGradient id="__PREFIX__pin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d939b"/><stop offset=".45" stop-color="#f2f4f6"/><stop offset="1" stop-color="#7d838b"/></linearGradient>
+  <linearGradient id="__PREFIX__fr4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9c56a"/><stop offset=".5" stop-color="#f2e3a0"/><stop offset="1" stop-color="#c9b25a"/></linearGradient>
+  <linearGradient id="__PREFIX__trace" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a9adb2"/><stop offset=".5" stop-color="#eef0f2"/><stop offset="1" stop-color="#9ea3a9"/></linearGradient>
+ </defs>
+ <g class="cgfx__wireview">
+  <!-- Soil around the prongs: its colour darkens as the moisture rises (set during the simulation) -->
+  <path class="cgfx__soil" d="M-20,78H20V150H-20z" fill="#b89462" opacity=".85"/>
+  <path d="M-20,78q5,-3 10,0t10,0t10,0t10,0" fill="none" stroke="#7a5a33" stroke-width=".8" opacity=".6"/>
+  <!-- Header pins: + and − at 2.54 mm, pointing up -->
+  <g>
+   <rect x="-6.2" y="0" width="2.4" height="14" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="3.8" y="0" width="2.4" height="14" rx=".6" fill="url(#__PREFIX__pin)"/>
+  </g>
+  <rect x="-10" y="11" width="20" height="8" rx="1" fill="#1a1a1a"/>
+  <rect x="-10" y="11" width="20" height="1.6" rx=".8" fill="#3a3a3a"/>
+  <!-- Black head of the fork with its mounting holes -->
+  <rect x="-18" y="18" width="36" height="18" rx="1.5" fill="#1d1f22" stroke="#000" stroke-width=".5"/>
+  <circle cx="-13" cy="27" r="2.6" fill="#d6dce2"/><circle cx="-13" cy="27" r="1.6" fill="#f4f5f6"/>
+  <circle cx="13" cy="27" r="2.6" fill="#d6dce2"/><circle cx="13" cy="27" r="1.6" fill="#f4f5f6"/>
+  <g fill="#f4f4f4" font-weight="700" font-size="4.6" text-anchor="middle"><text x="-5" y="31">+</text><text x="5" y="31">−</text></g>
+  <!-- Two gold prongs: the soil between them closes the circuit -->
+  <path d="M-18,36H-4V136L-11,148L-18,136z" fill="url(#__PREFIX__fr4)" stroke="#a8923e" stroke-width=".5"/>
+  <path d="M4,36H18V136L11,148L4,136z" fill="url(#__PREFIX__fr4)" stroke="#a8923e" stroke-width=".5"/>
+  <g fill="none" stroke="url(#__PREFIX__trace)" stroke-width="2" stroke-linecap="round">
+   <path d="M-11,38V136"/><path d="M11,38V136"/>
+  </g>
+  <g fill="#c9ced3" stroke="#8d939b" stroke-width=".4">
+   <circle cx="-11" cy="46" r="1.8"/><circle cx="-11" cy="60" r="1.8"/><circle cx="-11" cy="74" r="1.8"/><circle cx="-11" cy="88" r="1.8"/><circle cx="-11" cy="102" r="1.8"/><circle cx="-11" cy="116" r="1.8"/><circle cx="-11" cy="130" r="1.8"/>
+   <circle cx="11" cy="53" r="1.8"/><circle cx="11" cy="67" r="1.8"/><circle cx="11" cy="81" r="1.8"/><circle cx="11" cy="95" r="1.8"/><circle cx="11" cy="109" r="1.8"/><circle cx="11" cy="123" r="1.8"/>
+  </g>
+  <!-- Wet film over the buried part of the prongs (shown during the simulation) -->
+  <path class="cgfx__wet" d="M-18,78H-4V136L-11,148L-18,136zM4,78H18V136L11,148L4,136z" fill="#3a2410" opacity="0"/>
+  <path class="cgfx__hitarea" style="fill: rgb(255, 0, 0); display: inline; opacity: 0; pointer-events: all;" d="M-18,11h36v137h-36z"/>
+  <path class="cgfx__selected" display="none" fill="none" stroke="#009cda" stroke-width="2" stroke-linejoin="round" d="M-19.5,9.5h39v140h-39z" style="display: none; pointer-events: none;"/>
+ </g>
+</svg>

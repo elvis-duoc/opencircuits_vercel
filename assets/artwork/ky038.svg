@@ -1,0 +1,72 @@
+<svg class="cgfx__sensor-sound-module" xmlns="http://www.w3.org/2000/svg" viewBox="-28 0 56 124" width="56" height="124" style="fill: rgb(0, 0, 0); stroke: none; font-family: Arial, Helvetica, sans-serif;">
+ <defs>
+  <linearGradient id="__PREFIX__pin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d939b"/><stop offset=".45" stop-color="#f2f4f6"/><stop offset="1" stop-color="#7d838b"/></linearGradient>
+  <linearGradient id="__PREFIX__pcb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3242b"/><stop offset=".55" stop-color="#cc161d"/><stop offset="1" stop-color="#a80f14"/></linearGradient>
+  <linearGradient id="__PREFIX__pot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a9be8"/><stop offset=".6" stop-color="#2a74cf"/><stop offset="1" stop-color="#1b56a3"/></linearGradient>
+  <radialGradient id="__PREFIX__brass" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#fff2b0"/><stop offset=".55" stop-color="#e2b84a"/><stop offset="1" stop-color="#9c7420"/></radialGradient>
+  <radialGradient id="__PREFIX__mic" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#c3c9cf"/><stop offset="1" stop-color="#7b838b"/></radialGradient>
+  <radialGradient id="__PREFIX__felt" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#3a3c40"/><stop offset="1" stop-color="#121315"/></radialGradient>
+ </defs>
+ <g class="cgfx__wireview">
+  <!-- Right-angle header: AO, G, + and DO at 2.54 mm, pointing down out of the board -->
+  <g>
+   <rect x="-16.2" y="98" width="2.4" height="26" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="-6.2" y="98" width="2.4" height="26" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="3.8" y="98" width="2.4" height="26" rx=".6" fill="url(#__PREFIX__pin)"/>
+   <rect x="13.8" y="98" width="2.4" height="26" rx=".6" fill="url(#__PREFIX__pin)"/>
+  </g>
+  <!-- Sound waves reaching the microphone: their opacity follows the level during the simulation -->
+  <g class="cgfx__waves" opacity="0" fill="none" stroke="#1f62b8" stroke-width="1.6" stroke-linecap="round">
+   <path d="M-13,9.5a15,15 0 0 1 26,0"/><path d="M-19,11a21,21 0 0 1 38,0"/>
+  </g>
+  <!-- Red module board -->
+  <rect x="-24" y="12" width="48" height="88" rx="1.4" fill="url(#__PREFIX__pcb)" stroke="#7e0b0f" stroke-width=".6"/>
+  <!-- Silkscreen labels of the parts -->
+  <g fill="#fbe9e9" font-weight="700" font-size="2.6" text-anchor="middle">
+   <text x="-18.5" y="32">R4</text><text x="18.5" y="32">R3</text>
+   <text x="18" y="62">LED1</text><text x="-17.5" y="77">LED2</text>
+   <text x="18" y="86">R5</text><text x="-18" y="86">R6</text>
+   <text x="12" y="57.6">IC1</text>
+  </g>
+  <!-- Small resistors (SMD) with their codes, as on the board -->
+  <g>
+   <rect x="-22" y="34" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="-18" y="37.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">152</text>
+   <rect x="-12" y="29" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="-8" y="32.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">102</text>
+   <rect x="4" y="29" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="8" y="32.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">101</text>
+   <rect x="14" y="34" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="18" y="37.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">103</text>
+   <rect x="13" y="78" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="17" y="81.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">102</text>
+   <rect x="-21" y="78" width="8" height="4.4" rx=".4" fill="#1b1b1d" stroke="#d9dde1" stroke-width=".7"/><text x="-17" y="81.3" fill="#e9e9e9" font-size="2.3" text-anchor="middle">101</text>
+  </g>
+  <!-- Electret microphone at the end of the board: silver can with the black felt -->
+  <circle cx="0" cy="16" r="11.5" fill="url(#__PREFIX__mic)" stroke="#5f666d" stroke-width=".7"/>
+  <circle cx="0" cy="16" r="8.4" fill="url(#__PREFIX__felt)"/>
+  <circle cx="0" cy="16" r="8.4" fill="none" stroke="#45484d" stroke-width=".8" stroke-dasharray=".9 1.1"/>
+  <!-- LM393 comparator (SOIC-8) -->
+  <g fill="#c8cdd2"><rect x="3.4" y="41" width="2.4" height="1.3"/><rect x="3.4" y="44.4" width="2.4" height="1.3"/><rect x="3.4" y="47.8" width="2.4" height="1.3"/><rect x="3.4" y="51.2" width="2.4" height="1.3"/>
+   <rect x="18.2" y="41" width="2.4" height="1.3"/><rect x="18.2" y="44.4" width="2.4" height="1.3"/><rect x="18.2" y="47.8" width="2.4" height="1.3"/><rect x="18.2" y="51.2" width="2.4" height="1.3"/></g>
+  <rect x="5.6" y="39.6" width="12.8" height="14.2" rx=".7" fill="#1d1e21"/>
+  <circle cx="7.6" cy="41.8" r=".7" fill="#33363a"/>
+  <g fill="#9aa1a8" font-size="2.2" text-anchor="middle" font-weight="700"><text x="12" y="45.6">LM393</text><text x="12" y="48.6">P8AK</text><text x="12" y="51.6">1908H</text></g>
+  <!-- Blue multi-turn trimmer (3296) with its brass adjusting screw, which turns with the threshold -->
+  <rect x="-21.5" y="40" width="22" height="22" rx="1.2" fill="url(#__PREFIX__pot)" stroke="#164a8e" stroke-width=".6"/>
+  <rect x="-20" y="41.5" width="19" height="19" rx=".8" fill="none" stroke="#7fb6ef" stroke-width=".5" opacity=".7"/>
+  <g fill="#d6e8fb" font-size="2.4" font-weight="700" text-anchor="middle"><text x="-12" y="48">103</text><text x="-12" y="51.5">W104</text><text x="-12" y="55" font-size="1.9">3296</text></g>
+  <g class="cgfx__potknob" transform="translate(-4.5 57.5) rotate(-135)">
+   <circle r="3.4" fill="url(#__PREFIX__brass)" stroke="#7c5b17" stroke-width=".5"/>
+   <path d="M-2.5,0H2.5" stroke="#6b4d12" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <!-- Mounting hole -->
+  <circle cx="0" cy="71" r="4.6" fill="#d6dbe0" stroke="#9aa2aa" stroke-width=".5"/><circle cx="0" cy="71" r="3" fill="#f6f7f8"/>
+  <!-- Indicator LEDs: LED1 power, LED2 lit while the sound is over the threshold (DO) -->
+  <rect x="13.5" y="64" width="8" height="6" rx=".6" fill="#eef1f4" stroke="#b9c0c7" stroke-width=".4"/><rect x="15.4" y="65.2" width="4.2" height="3.6" rx=".5" fill="#5a2a2a" class="cgfx__powerled"/>
+  <rect x="-21.5" y="66" width="8" height="6" rx=".6" fill="#eef1f4" stroke="#b9c0c7" stroke-width=".4"/><rect x="-19.6" y="67.2" width="4.2" height="3.6" rx=".5" fill="#2f5a3a" class="cgfx__ledsignal"/>
+  <!-- Pin names and the header plastic -->
+  <g fill="#fbe9e9" font-weight="700" font-size="3.6" text-anchor="middle">
+   <text x="-15" y="90.5">AO</text><text x="-5" y="90.5">G</text><text x="5" y="90.5">+</text><text x="15" y="90.5">DO</text>
+  </g>
+  <rect x="-20" y="92" width="40" height="8" rx="1" fill="#1a1a1a"/>
+  <rect x="-20" y="92" width="40" height="1.6" rx=".8" fill="#3a3a3a"/>
+  <path class="cgfx__hitarea" style="fill: rgb(255, 0, 0); display: inline; opacity: 0; pointer-events: all;" d="M-24,4.5h48v95.5h-48z"/>
+  <path class="cgfx__selected" display="none" fill="none" stroke="#009cda" stroke-width="2" stroke-linejoin="round" d="M-26,2.5h52v99.5h-52z" style="display: none; pointer-events: none;"/>
+ </g>
+</svg>
